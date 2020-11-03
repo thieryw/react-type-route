@@ -1,0 +1,28 @@
+body{
+    .App{
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(7, 7, 43);
+            color: white;
+            h1{
+                margin-left: 40px;
+            }
+            ul{
+                display: flex;
+                list-style: none;
+                li{
+                    margin-right: 40px;
+                }
+
+            }
+        }
+
+        div{
+            h1{
+                text-align: center;
+            }
+        }
+    }
+}
