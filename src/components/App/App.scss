@@ -15,12 +15,13 @@ body{
                 li{
                     margin-right: 40px;
                     transition: color 300ms;
+                    padding: 10px;
 
                 }
 
                 li:hover{
                     color: greenyellow;
-                    cursor: pointer;
+                    cursor: default;
                 }
             }
         }
