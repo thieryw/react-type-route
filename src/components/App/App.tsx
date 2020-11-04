@@ -4,14 +4,13 @@ import {useRoute} from "../../router";
 import {Home} from "../Home/Home"
 import {Info} from "../Pages/Info";
 import {Service} from "../Pages/Service";
+import {routes} from "../../router";
 
 
 
 
 export const App: React.FunctionComponent = ()=>{
     const route = useRoute();
-
-    console.log(route.name);
     
     return(
         <div className="App">
@@ -28,13 +27,17 @@ export const App: React.FunctionComponent = ()=>{
 
 const Navigation: React.FunctionComponent = ()=>{
 
+
+
     return(
         <nav>
             <h1>Site Name</h1>
             <ul>
-                <li>Home</li>
-                <li>Info</li>
-                <li>Service</li>
+
+
+                <li {...routes.home().link}>Home</li>
+                <li {...routes.info().link}>Info</li>
+                <li {...routes.service().link}>Service</li>
 
             </ul>
         </nav>

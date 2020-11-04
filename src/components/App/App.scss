@@ -14,8 +14,14 @@ body{
                 list-style: none;
                 li{
                     margin-right: 40px;
+                    transition: color 300ms;
+
                 }
 
+                li:hover{
+                    color: greenyellow;
+                    cursor: pointer;
+                }
             }
         }
 
