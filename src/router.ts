@@ -17,6 +17,7 @@ const root = publicUrl ? defineRoute(publicUrl) : {"extend": defineRoute};
 
 export const {RouteProvider, useRoute, routes} = createRouter({
 
+
     home: root.extend("/"),
 
     info: defineRoute("/react-type-route/info"),
