@@ -9,11 +9,8 @@ export const Home: React.FunctionComponent = ()=>{
     const homeRef = useRef<HTMLDivElement>(null);
     const headerRef = useRef<HTMLDivElement>(null);
 
-    const [backgroundPosition, setBackgroundPosition] = useState(-100);
 
-    const [currentScrollHeight, setCurrentScrollHeight] = useState(0);
-
-    const handleScroll = useCallback(async ()=>{
+    const handleScroll = useCallback(()=>{
 
         if(!homeRef || !homeRef.current){
             return;
@@ -24,27 +21,12 @@ export const Home: React.FunctionComponent = ()=>{
             return;
         }
 
-           
-
-        headerRef.current.style.backgroundPositionY = `${backgroundPosition}px`
-
-
-        if(homeRef.current.scrollTop > currentScrollHeight){
-            setBackgroundPosition(backgroundPosition + 2);
-            console.log("down");
-        }else{
-
-            setBackgroundPosition(backgroundPosition - 2);
-
-            console.log("up");
-        }
-
-
-        setCurrentScrollHeight(homeRef.current.scrollTop);
-
+        headerRef.current.style.backgroundPositionY = `
+            ${-homeRef.current.scrollTop / 10}px
+        `;
         
 
-    },[backgroundPosition, currentScrollHeight]);
+    },[]);
 
     
 

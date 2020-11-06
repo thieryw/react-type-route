@@ -1,5 +1,4 @@
 
-$backgroundPosY: -100px;
 
 .Home{
     width: 100vw;
@@ -11,8 +10,7 @@ $backgroundPosY: -100px;
     header{
         background-image: url("background-home.jpg");
         background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: $backgroundPosY;
+        background-position: center;
         background-attachment: fixed;
         background-size: cover;
         display: flex;
