@@ -1,4 +1,5 @@
-import React, {useRef, useCallback, useState} from  "react";
+import React, {useRef, useCallback, useEffect} from  "react";
+import ReactDOM from "react-dom";
 import "./Home.scss";
 
 
@@ -9,6 +10,7 @@ export const Home: React.FunctionComponent = ()=>{
     const homeRef = useRef<HTMLDivElement>(null);
     const headerRef = useRef<HTMLDivElement>(null);
 
+   
 
     const handleScroll = useCallback(()=>{
 
@@ -20,6 +22,13 @@ export const Home: React.FunctionComponent = ()=>{
         if(!headerRef || !headerRef.current){
             return;
         }
+
+
+
+
+
+
+
 
         headerRef.current.style.backgroundPositionY = `
             ${-homeRef.current.scrollTop / 10}px
