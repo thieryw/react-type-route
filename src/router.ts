@@ -10,18 +10,17 @@ export const { RouteProvider, useRoute, routes } = createRouter({
   "home": root.extend("/home")
 });*/
 
-const publicUrl = process.env["PUBLIC_URL"];
+const root = defineRoute(process.env["PUBLIC_URL"]);
 
-const root = publicUrl ? defineRoute(publicUrl) : {"extend": defineRoute};
-
+const info= root.extend("/info");
 
 export const {RouteProvider, useRoute, routes} = createRouter({
 
+    "home": root,
+    info,
+    "info1": info.extend("/info1"),
+    "info2": info.extend("/info2"),
 
-    home: root.extend("/"),
-
-    info: defineRoute("/react-type-route/info"),
-
-    service: defineRoute("/react-type-route/service")
+    "service": root.extend("/service")
 
 })
